@@ -111,7 +111,7 @@ class MainActivity : AppCompatActivity() {
                 R.array.currencies,
                 android.R.layout.simple_spinner_item
         ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            adapter.setDropDownViewResource(R.layout.spinner_list)
 
             spinner.adapter = adapter
 
@@ -122,7 +122,7 @@ class MainActivity : AppCompatActivity() {
                 R.array.currencies2,
                 android.R.layout.simple_spinner_item
         ).also { adapter ->
-            adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            adapter.setDropDownViewResource(R.layout.spinner_list)
 
             spinner2.adapter = adapter
 

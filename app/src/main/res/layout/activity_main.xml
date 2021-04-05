@@ -4,31 +4,37 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity"
-    android:background="#E8E8E8">
+    android:background="@color/white"
+    tools:context=".MainActivity">
+
+    <com.google.android.material.appbar.MaterialToolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        app:title="@string/app_name" />
 
     <androidx.cardview.widget.CardView
-        android:layout_centerInParent="true"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
         android:layout_margin="20dp"
+        android:backgroundTint="#2881ff"
         app:cardCornerRadius="10dp">
 
         <LinearLayout
             android:id="@+id/ll_parent"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
+            android:layout_height="150dp"
             android:layout_centerInParent="true"
             android:layout_margin="30dp"
-            android:orientation="vertical"
-            android:gravity="center">
+            android:gravity="center"
+            android:orientation="vertical">
 
             <LinearLayout
                 android:id="@+id/ll_firstConversion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/et_firstConversion"
@@ -36,12 +42,16 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="From"
-                    android:inputType="number"/>
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
 
                 <Spinner
+                    android:id="@+id/spinner_firstConversion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/spinner_firstConversion"/>
+                    android:backgroundTint="@color/white"
+                    android:hapticFeedbackEnabled="true"/>
 
             </LinearLayout>
 
@@ -49,8 +59,8 @@
                 android:id="@+id/ll_secondConversion"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:gravity="center_vertical">
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
 
                 <EditText
                     android:id="@+id/et_secondConversion"
@@ -58,12 +68,16 @@
                     android:layout_height="wrap_content"
                     android:layout_weight="1"
                     android:hint="To"
-                    android:inputType="number"/>
+                    android:inputType="number"
+                    android:textColor="@color/white"
+                    android:textColorHint="@color/white" />
 
                 <Spinner
+                    android:id="@+id/spinner_secondConversion"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:id="@+id/spinner_secondConversion"/>
+                    android:backgroundTint="@color/white"
+                    android:hapticFeedbackEnabled="true"/>
 
             </LinearLayout>
 
